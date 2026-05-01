@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: #09090b;
+    color: #ffffff;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #18181b; }
+  ::-webkit-scrollbar-thumb { background: #dc2626; border-radius: 3px; }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-300;
+  }
+  .circuit-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40 H30 M50 40 H80 M40 0 V30 M40 50 V80' stroke='%23dc2626' stroke-width='0.4' fill='none'/%3E%3Ccircle cx='40' cy='40' r='3' fill='none' stroke='%23dc2626' stroke-width='0.4'/%3E%3Ccircle cx='0' cy='40' r='1.5' fill='%23dc2626'/%3E%3Ccircle cx='80' cy='40' r='1.5' fill='%23dc2626'/%3E%3Ccircle cx='40' cy='0' r='1.5' fill='%23dc2626'/%3E%3Ccircle cx='40' cy='80' r='1.5' fill='%23dc2626'/%3E%3C/svg%3E");
+  }
+}
