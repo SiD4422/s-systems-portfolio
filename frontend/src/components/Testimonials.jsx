@@ -26,9 +26,6 @@ export default function Testimonials() {
       .finally(() => setLoading(false))
   }, [])
 
-  // Don't render section if no approved testimonials yet
-  if (!loading && items.length === 0) return null
-
   return (
     <section id="testimonials" className="bg-zinc-900 py-24 px-6">
       <div className="max-w-6xl mx-auto">
@@ -40,6 +37,10 @@ export default function Testimonials() {
         {loading ? (
           <div className="flex justify-center py-12">
             <div className="w-6 h-6 border-2 border-red-600 border-t-transparent rounded-full animate-spin" />
+          </div>
+        ) : items.length === 0 ? (
+          <div className="text-center py-12">
+            <p className="text-zinc-500 text-lg">No feedback yet. Be the first to leave a review!</p>
           </div>
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
