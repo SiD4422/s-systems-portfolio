@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-const NAV_LINKS = ['Home', 'Services', 'Portfolio', 'Testimonials', 'Contact']
+const NAV_LINKS = ['Home', 'Services', 'Portfolio', 'Testimonials', 'Blog', 'Contact']
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)

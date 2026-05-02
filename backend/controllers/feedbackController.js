@@ -52,10 +52,10 @@ function getAllFeedback(req, res) {
 
 /**
  * GET /api/feedback/approved
- * Public — returns all testimonials for frontend display (approval no longer required)
+ * Public — returns only approved testimonials for frontend display
  */
 function getApprovedFeedback(req, res) {
-  const rows = db.prepare('SELECT id, name, project, rating, message FROM feedback ORDER BY created_at DESC').all();
+  const rows = db.prepare('SELECT id, name, project, rating, message FROM feedback WHERE approved = 1 ORDER BY created_at DESC').all();
   res.json({ feedback: rows });
 }
 
