@@ -2,7 +2,7 @@
 // Floating WhatsApp chat button — bottom-right corner
 export default function WhatsAppButton() {
   // Replace with your actual WhatsApp number (with country code, no + or spaces)
-  const phone = '91XXXXXXXXXX'
+  const phone = '918075898408'
   const message = encodeURIComponent('Hi JS Systems! I am interested in ordering a project.')
 
   return (
